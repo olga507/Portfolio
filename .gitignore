@@ -1,1 +1,4 @@
 node_modules
+dist/mailer
+src/mailer
+dist/pulse/mailer
