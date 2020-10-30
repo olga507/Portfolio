@@ -28,8 +28,8 @@
         z-index: 2;
         @include before_circle;
         &:before {
-            content: '\263A';
-            font-size: 36px;
+            content: '';
+            background-image: url(../../icons/experience/bird.svg);
             animation-name: circle;
             animation-duration: 6s;
             animation-timing-function: ease;
