@@ -241,6 +241,11 @@
             font-size: 26px;
             line-height: 45px;
         }
+        &__item {
+            &__china {
+                grid-column: 1;
+            }
+        }
     }
     .contacts {
         &__btn {
