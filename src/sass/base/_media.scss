@@ -166,11 +166,6 @@
     }
     .portfolio {
         padding-top: 70px;
-        &__wrapper {
-            grid-template-columns: repeat(auto-fit,450px);
-            justify-content: center;
-            gap: 15px;
-        }
         &__subtitle {
             line-height: 45px;
         }
@@ -241,9 +236,14 @@
             font-size: 26px;
             line-height: 45px;
         }
+        &__wrapper {
+            grid-template-rows: repeat(2, 230px);
+        }
         &__item {
-            &__china {
-                grid-column: 1;
+            &_china {
+                img {
+                    object-position: 60%;
+                }
             }
         }
     }
@@ -330,6 +330,11 @@
     }
     .divider {
         margin: 10px auto 0 auto;
+    }
+    .portfolio {
+        &__wrapper {
+            grid-template-rows: repeat(2, 170px);
+        }
     }
     .contacts {
         &__form {
@@ -470,21 +475,29 @@
     .portfolio {
         padding-top: 40px;
         &__wrapper {
-            grid-template-columns: repeat(auto-fit,280px);
+            grid-template-columns: 0.9fr;
+            grid-template-rows: repeat(4, 230px);
             justify-content: center;
             margin-top: 25px;
-            grid-auto-rows: auto;
         }
         &__item {
-            img{
-                height: 220px;}
+            &_prengi {
+                grid-row: auto;
+                grid-column: auto;
+                img {
+                    object-position: 0 74%;
+                }
+            }
+            &_china {
+                grid-column: auto;
+            }
         }
     }
     .contacts {
         padding: 25px 0 50px 0;
         &__form {
             padding: 10px 0 0 0;
-            grid-template: 45px 45px 190px minmax(45px, auto)/1fr;
+            grid-template: 45px 45px 190px minmax(45px, auto)/0.9fr;
             row-gap: 36px;
         }
         &__trigger {
